@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password hidden</title>
+    <link rel="stylesheet" href="PasStyl.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <div class="input_box">
+                <input type="text" class="input" placeholder="Password">
+                <img src="PasImages/hide.png" onclick="change()" class="password">
+            </div>
+
+        </div>
+    </div>
+</body>
+<script> 
+    let input = document.querySelector('.input');
+    let password = document.querySelector('.password');
+
+    function change() {
+        if (input.type == 'text') {
+            input.type = 'password';
+            password.src = 'PasImages/witness.png';
+        } else {
+            input.type = 'text';
+            password.src = 'PasImages/hide.png';
+        }
+    }
+    
+</script>
+</html>
